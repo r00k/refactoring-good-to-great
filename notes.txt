@@ -1,0 +1,28 @@
+* Intro
+* Smells
+  * Data clumps
+    * Classify
+  * Excessive conditionals
+    * NullObject
+  * Long argument lists
+    * Method Object
+  * God Objects
+    * Extract class
+  * Mystery Guest 
+  * Stubbing the system under test
+* General ideas
+  * The Open-Closed Principle
+  * Types of coupling
+    * Pathological - if you call instance_var_set/get you BETTER know what you're doing
+    * Global - factory_girl definitions
+    * Control coupling - save(false)
+    * Data coupling - passing a param
+    * Message coupling - coupling to the name of a method
+  * The beauty of the Decorator pattern
+
+General:
+
+introduce a smell with an example and specs
+refactor it
+
+try to stick to pure ruby; create rails app in separate dir if desired

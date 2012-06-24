@@ -5,6 +5,7 @@
   * Excessive conditionals
     * NullObject
   * Long argument lists
+    * Why shorter is better
     * Method Object
   * God Objects
     * Extract class

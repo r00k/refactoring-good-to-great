@@ -30,5 +30,18 @@ try to stick to pure ruby; create rails app in separate dir if desired
 
 
 data_clump.rb
+  * replace select with query or order
+  * this causes feature envy
+  * move method to order
+  * start_date, end_date are a data clump
+  * extract to DateRange
+  * immediate win: coupling is reduced
+    * the degree to which components rely on each other
+    * fewer methods is less coupling
+  * create within_range? on DateRange
+  * move temp to query on OrdersReport
+    * can reuse
+    * don't have to read it; makes logic clearer
+
 
 

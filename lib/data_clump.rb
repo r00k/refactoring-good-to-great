@@ -1,4 +1,4 @@
-require 'active_support_date_stuff'
+require 'date'
 require 'ostruct'
 
 class OrdersReport
@@ -10,7 +10,7 @@ class OrdersReport
 
   def total_sales_within_range
     orders_in_range = @orders.select { |order| order.placed_at >= @start_date && order.placed_at <= @end_date }
-    orders_in_range.map(&:amount).sum
+    orders_in_range.map(&:amount).inject { |sum, amount| amount + sum }
   end
 end
 

@@ -27,3 +27,8 @@ introduce a smell with an example and specs
 refactor it
 
 try to stick to pure ruby; create rails app in separate dir if desired
+
+
+data_clump.rb
+
+

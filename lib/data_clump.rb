@@ -1,6 +1,4 @@
-# require 'active_support/core_ext/date/calculations'
-# require 'active_support/core_ext/numeric/time'
-require 'active_support/all'
+require 'active_support_date_stuff'
 require 'ostruct'
 
 class OrdersReport

@@ -20,7 +20,7 @@ class JobSite
 
   def company_name
     if contact
-      contact.company_name
+      contact.company.name
     else
       'None'
     end
@@ -32,9 +32,6 @@ class JobSite
 end
 
 class Contact < OpenStruct
-  def company_name
-    company.name
-  end
 end
 
 class Company < OpenStruct

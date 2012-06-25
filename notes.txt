@@ -42,6 +42,13 @@ data_clump.rb
   * move temp to query on OrdersReport
     * can reuse
     * don't have to read it; makes logic clearer
+    * ????? should this be a method on Order?
 
+null_object.rb
+  * breaking the core ideas of polymorphism 
+    * rather than just sending a msg, we're asking and then reacting
+    * would rather just send a message
+  * we co-opted nil to stand in for 'no customer'
+  * create NullCustomer
 
 

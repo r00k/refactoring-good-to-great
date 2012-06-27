@@ -35,6 +35,12 @@ class Contact < OpenStruct
 end
 
 class Company < OpenStruct
+  attr_accessor :company, :name
+
+  def initialize(options)
+    @company = options[:company]
+    @name = options[:name]
+  end
 end
 
 class Location

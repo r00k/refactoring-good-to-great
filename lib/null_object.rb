@@ -19,7 +19,7 @@ class JobSite
   end
 
   def company_name
-    if contact
+    if contact && contact.company
       contact.company.name
     else
       'None'

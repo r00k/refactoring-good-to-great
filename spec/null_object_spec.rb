@@ -3,8 +3,8 @@ require_relative '../lib/null_object'
 describe 'When a site has a contact' do
   before do
     company = Company.new(name: 'thoughtbot')
-    contact = Contact.new(name: 'John Smith', phone: '555-1212', company: company)
-    @site = JobSite.new(Location.new, contact)
+    @contact = Contact.new(name: 'John Smith', phone: '555-1212', company: company)
+    @site = JobSite.new(Location.new, @contact)
   end
 
   describe '#contact_name' do
@@ -18,6 +18,7 @@ describe 'When a site has a contact' do
       @site.company_name.should == 'thoughtbot'
     end
   end
+
 end
 
 describe 'When a site lacks a contact' do
@@ -35,5 +36,16 @@ describe 'When a site lacks a contact' do
     it 'returns no company'  do
       @site.company_name.should == 'None'
     end
+  end
+end
+
+describe 'When the contact has no company' do
+  before do
+    contact = Contact.new(name: 'John Smith', phone: '555-1212')
+    @site = JobSite.new(Location.new, contact)
+  end
+
+  it 'returns None' do
+    @site.company_name.should == 'None'
   end
 end

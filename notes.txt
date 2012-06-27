@@ -28,21 +28,28 @@ refactor it
 
 try to stick to pure ruby; create rails app in separate dir if desired
 
+Intro
+ * me
+ * intermediate to advanced
+ * ask questions
+ * I have bribes
 
 data_clump.rb
-  * replace select with query or order
+  * replace select with query on order
   * this causes feature envy
   * move method to order
-  * start_date, end_date are a data clump
+  * start_date, end_date are a data clump, passed in three places
   * extract to DateRange
   * immediate win: coupling is reduced
     * the degree to which components rely on each other
-    * fewer methods is less coupling
+    * fewer arguments is less coupling
   * create within_range? on DateRange
   * move temp to query on OrdersReport
+    * shorter methods
     * can reuse
     * don't have to read it; makes logic clearer
-    * ????? should this be a method on Order?
+  * extract summation into private total_sales
+  * change to inject(&:+)
 
 null_object.rb
   * breaking the core ideas of polymorphism 
@@ -52,3 +59,21 @@ null_object.rb
   * create NullCustomer
   * demo nested NullCompany
   * refactor to fix LoD
+
+open_closed_observer.rb
+
+open_closed_decorator.rb
+
+view decorator?
+
+when to refactor
+  * god objects
+    * wc -l
+  * high churn files
+  * bugs love company
+
+
+TODO:
+
+  run in tiny res
+

@@ -30,12 +30,15 @@ class JobSite
 
   def email_contact(email)
     if contact
-      email.deliver(contact.name)
+      contact.deliver_personalized_email(email)
     end
   end
 end
 
 class Contact < OpenStruct
+  def deliver_personalized_email(email)
+    email.deliver(name)
+  end
 end
 
 class Location

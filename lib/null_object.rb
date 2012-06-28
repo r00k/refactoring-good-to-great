@@ -18,11 +18,19 @@ class JobSite
     end
   end
 
-  def company_name
+  def contact_phone
     if contact
-      contact.company_name
+      contact.phone
     else
-      'none'
+      'no contact'
+    end
+  end
+
+  def contact_address
+    if contact
+      contact.address
+    else
+      'no contact'
     end
   end
 
@@ -32,23 +40,6 @@ class JobSite
 end
 
 class Contact < OpenStruct
-  attr_reader :name, :company
-
-  def initialize(name, company)
-    @name = name
-    @company = company
-  end
-
-  def company_name
-    if company
-      company.name
-    else
-      'none'
-    end
-  end
-end
-
-class Company < OpenStruct
 end
 
 class Location

@@ -34,8 +34,12 @@ Intro - 2 mins
  * ask questions
  * I have bribes
 
-data_clump.rb
-  * show the spec first
+data_clump.rb - 24 minutes, spend less time on coupling
+  * roughly a B
+  * move temp to query on OrdersReport
+    * shorter methods
+    * can reuse
+    * don't have to read it; makes logic clearer
   * move select to Order#placed_between?(start_date, end_date)
   * identify data clump, passed in three places
   * extract to DateRange
@@ -43,11 +47,7 @@ data_clump.rb
     * the degree to which components rely on each other
     * fewer arguments is less coupling
   * create within_range? on DateRange
-  * move temp to query on OrdersReport
-    * shorter methods
-    * can reuse
-    * don't have to read it; makes logic clearer
-  * extract summation into private total_sales
+  * create private Order#total_sales
   * change to inject(&:+)
 
 null_object.rb

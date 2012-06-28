@@ -8,10 +8,6 @@ class JobSite
     @contact = contact
   end
 
-  def location_city
-    location.city
-  end
-
   def contact_name
     if contact
       contact.name
@@ -42,7 +38,4 @@ class Contact < OpenStruct
 end
 
 class Location
-end
-
-class Mailer
 end

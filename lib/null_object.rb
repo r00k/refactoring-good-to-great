@@ -28,11 +28,9 @@ class JobSite
     end
   end
 
-  def contact_address
+  def email_contact(email)
     if contact
-      contact.address
-    else
-      'no address'
+      email.deliver(contact.name)
     end
   end
 end
@@ -41,4 +39,7 @@ class Contact < OpenStruct
 end
 
 class Location
+end
+
+class Mailer
 end

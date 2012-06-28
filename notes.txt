@@ -56,8 +56,6 @@ null_object.rb
     * would rather just send a message
   * we co-opted nil to stand in for 'no customer'
   * create NullCustomer
-  * demo nested NullCompany
-  * refactor to fix LoD
 
 open_closed_observer.rb
 

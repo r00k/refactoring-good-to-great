@@ -1,5 +1,9 @@
 require_relative '../lib/null_object'
 
+RSpec.configure do |config|
+  config.mock_framework = :mocha
+end
+
 describe 'When a site has a contact' do
   before do
     @contact = Contact.new(name: 'John Smith',
@@ -21,9 +25,12 @@ describe 'When a site has a contact' do
     end
   end
 
-  describe '#contact_address' do
-    it "returns the contact's address" do
-      @site.contact_address.should == '123 Main St'
+  describe '#email_contact' do
+    it "sends an email to the contact" do
+      email = mock('email')
+      email.expects(:deliver).with('John Smith').once
+
+      @site.email_contact(email)
     end
   end
 end
@@ -45,9 +52,12 @@ describe 'When a site lacks a contact' do
     end
   end
 
-  describe '#contact_address' do
-    it 'returns a null address'  do
-      @site.contact_address.should == 'no address'
+  describe '#email_contact' do
+    it "does not email the contact" do
+      email = mock('email')
+      email.expects(:deliver).never
+
+      @site.email_contact(email)
     end
   end
 end

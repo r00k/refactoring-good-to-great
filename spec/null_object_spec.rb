@@ -34,20 +34,20 @@ describe 'When a site lacks a contact' do
   end
 
   describe '#contact_name' do
-    it 'complains about no contact'  do
-      @site.contact_name.should == 'no contact'
+    it 'returns a null name'  do
+      @site.contact_name.should == 'no name'
     end
   end
 
   describe '#contact_phone' do
-    it 'complains about no contact'  do
-      @site.contact_phone.should == 'no contact'
+    it 'returns a null phone'  do
+      @site.contact_phone.should == 'no phone'
     end
   end
 
   describe '#contact_address' do
-    it 'complains about no contact'  do
-      @site.contact_address.should == 'no contact'
+    it 'returns a null address'  do
+      @site.contact_address.should == 'no address'
     end
   end
 end

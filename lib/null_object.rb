@@ -16,7 +16,7 @@ class JobSite
     if contact
       contact.name
     else
-      'no contact'
+      'no name'
     end
   end
 
@@ -24,7 +24,7 @@ class JobSite
     if contact
       contact.phone
     else
-      'no contact'
+      'no phone'
     end
   end
 
@@ -32,7 +32,7 @@ class JobSite
     if contact
       contact.address
     else
-      'no contact'
+      'no address'
     end
   end
 end

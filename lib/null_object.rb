@@ -14,15 +14,15 @@ class JobSite
     if contact
       contact.name
     else
-      'No Contact'
+      'no contact'
     end
   end
 
   def company_name
-    if contact && contact.company
-      contact.company.name
+    if contact
+      contact.company_name
     else
-      'None'
+      'none'
     end
   end
 
@@ -32,6 +32,13 @@ class JobSite
 end
 
 class Contact < OpenStruct
+  def company_name
+    if company
+      company.name
+    else
+      'none'
+    end
+  end
 end
 
 class Company < OpenStruct

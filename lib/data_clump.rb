@@ -8,7 +8,7 @@ class OrdersReport
     @end_date = end_date
   end
 
-  def total_sales_within_range
+  def total_sales_within_date_range
     orders_in_range =
       @orders.select { |order| order.placed_at >= @start_date &&
                                order.placed_at <= @end_date }

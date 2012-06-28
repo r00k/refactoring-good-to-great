@@ -28,17 +28,16 @@ refactor it
 
 try to stick to pure ruby; create rails app in separate dir if desired
 
-Intro
+Intro - 2 mins
  * me
  * intermediate to advanced
  * ask questions
  * I have bribes
 
 data_clump.rb
-  * replace select with query on order
-  * this causes feature envy
-  * move method to order
-  * start_date, end_date are a data clump, passed in three places
+  * show the spec first
+  * move select to Order#placed_between?(start_date, end_date)
+  * identify data clump, passed in three places
   * extract to DateRange
   * immediate win: coupling is reduced
     * the degree to which components rely on each other

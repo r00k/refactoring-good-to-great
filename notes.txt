@@ -56,7 +56,7 @@ null_object.rb - 6 m
     * would rather just send a message
   * we co-opted nil to stand in for 'no customer'
   * create NullCustomer
-  * usable for Visitors vs Logged-in users
+  * usable for Prospect vs Logged-in users
   * mention podcast
 
 open_closed_observer.rb

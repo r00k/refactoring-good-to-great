@@ -1,5 +1,3 @@
-require 'open_closed_support'
-
 class User # < ActiveRecord::Base
   def save
     # Do ActiveRecord#save stuff.

@@ -59,11 +59,8 @@ null_object.rb - 6 m
   * usable for Prospect vs Logged-in users
   * mention podcast
 
-open_closed_observer.rb
-
 open_closed_decorator.rb
 
-view decorator?
 
 when to refactor
   * god objects

@@ -1,6 +1,8 @@
 require 'ostruct'
 
 class JobSite
+  attr_reader :contact
+
   def initialize(location, contact)
     @location = location
     @contact = contact
@@ -33,10 +35,6 @@ class JobSite
       'no contact'
     end
   end
-
-  private
-
-  attr_reader :contact
 end
 
 class Contact < OpenStruct

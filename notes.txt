@@ -50,12 +50,14 @@ data_clump.rb - 24 minutes, spend less time on coupling
   * create private Order#total_sales
   * change to inject(&:+)
 
-null_object.rb
+null_object.rb - 6 m
   * breaking the core ideas of polymorphism 
     * rather than just sending a msg, we're asking and then reacting
     * would rather just send a message
   * we co-opted nil to stand in for 'no customer'
   * create NullCustomer
+  * usable for Visitors vs Logged-in users
+  * mention podcast
 
 open_closed_observer.rb
 

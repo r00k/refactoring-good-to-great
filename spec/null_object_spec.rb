@@ -3,8 +3,7 @@ require_relative '../lib/null_object'
 describe 'When a site has a contact' do
   before do
     company = Company.new(name: 'thoughtbot')
-    @contact = Contact.new(name: 'John Smith', phone: '555-1212',
-                           company: company)
+    @contact = Contact.new('John Smith', company)
     @site = JobSite.new(Location.new, @contact)
   end
 
@@ -42,7 +41,7 @@ end
 
 describe 'When the contact has no company' do
   before do
-    contact = Contact.new(name: 'John Smith', phone: '555-1212')
+    contact = Contact.new('John Smith', nil)
     @site = JobSite.new(Location.new, contact)
   end
 

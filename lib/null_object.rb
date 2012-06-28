@@ -32,6 +32,13 @@ class JobSite
 end
 
 class Contact < OpenStruct
+  attr_reader :name, :company
+
+  def initialize(name, company)
+    @name = name
+    @company = company
+  end
+
   def company_name
     if company
       company.name
@@ -42,12 +49,6 @@ class Contact < OpenStruct
 end
 
 class Company < OpenStruct
-  attr_accessor :company, :name
-
-  def initialize(options)
-    @company = options[:company]
-    @name = options[:name]
-  end
 end
 
 class Location

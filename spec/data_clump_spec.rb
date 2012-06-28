@@ -1,4 +1,5 @@
 require_relative '../lib/data_clump'
+require 'spec_helper'
 
 describe OrdersReport do
   describe '#total_sales_within_date_range' do

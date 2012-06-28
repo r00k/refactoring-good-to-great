@@ -1,8 +1,5 @@
 require_relative '../lib/null_object'
-
-RSpec.configure do |config|
-  config.mock_framework = :mocha
-end
+require 'spec_helper'
 
 describe 'When a site has a contact' do
   before do

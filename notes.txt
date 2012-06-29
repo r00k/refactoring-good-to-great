@@ -18,6 +18,7 @@ data_clump.rb - 24 minutes, spend less time on coupling, 3-21
     * the degree to which components rely on each other
     * fewer arguments is less coupling
   * create within_range? on DateRange
+  * refactor within_range? to use start_date..end_date.include?(date)
   * create private Order#total_sales
   * change to inject(&:+)
 

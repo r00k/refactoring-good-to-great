@@ -1,31 +1,7 @@
-* Intro
-* Smells
-  * Data clumps
-    * Classify
-  * Excessive conditionals
-    * NullObject
-  * Long argument lists
-    * Why shorter is better
-    * Method Object
-  * God Objects
-    * Extract class
-  * Mystery Guest 
-  * Stubbing the system under test
-* General ideas
-  * The Open-Closed Principle
-  * Types of coupling
-    * Pathological - if you call instance_var_set/get you BETTER know what you're doing
-    * Global - factory_girl definitions
-    * Control coupling - save(false)
-    * Data coupling - passing a param
-    * Message coupling - coupling to the name of a method
-  * The beauty of the Decorator pattern
-
-================================================================
-
 Intro - 2 mins
  * me
  * intermediate to advanced
+ * tell, don't ask
  * ask questions
  * I have bribes
 
@@ -55,14 +31,16 @@ null_object.rb - 6 m
   * mention podcast
 
 open_closed_decorator.rb
-  * need an AdminDec and a UserDec, each with their own message
-  * add a as_decorated_user method to User
-
+  * change view to @user.welcome_message
+  * create transparent decorators
   * proxy:
     def method_missing(method, *args, &block)
       @user.send(method, *args, &block)
     end
-
+  * redefine welcome_message
+  * wins:
+    * logic is separated
+    * new methods will still show up on decorated
 
 when to refactor
   * god objects
@@ -73,4 +51,4 @@ when to refactor
 
 TODO:
   run in tiny res
-
+  rename files

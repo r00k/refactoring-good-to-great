@@ -30,7 +30,7 @@ null_object.rb - 6 m
   * usable for Prospect vs Logged-in users
   * mention podcast
 
-open_closed_decorator.rb
+open_closed_decorator.rb - 11:30m
   * change view to @user.welcome_message
   * create transparent decorators
   * proxy:
@@ -42,13 +42,19 @@ open_closed_decorator.rb
     * logic is separated
     * new methods will still show up on decorated
 
-when to refactor
+when to refactor - 5m
   * god objects
     * wc -l
   * high churn files
   * bugs love company
 
-
 TODO:
   run in tiny res
   rename files
+
+Setup:
+  boot macvim
+  run tests
+  clean repo
+  get directory in levelup
+  open churn in tab

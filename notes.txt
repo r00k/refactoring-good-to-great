@@ -48,10 +48,6 @@ when to refactor - 5m
   * high churn files
   * bugs love company
 
-TODO:
-  run in tiny res
-  rename files
-
 Setup:
   boot macvim
   run tests

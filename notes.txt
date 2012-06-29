@@ -55,6 +55,8 @@ null_object.rb - 6 m
   * mention podcast
 
 open_closed_decorator.rb
+  * need an AdminDec and a UserDec, each with their own message
+  * add a as_decorated_user method to User
 
 
 when to refactor

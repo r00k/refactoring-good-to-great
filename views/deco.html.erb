@@ -1,0 +1,5 @@
+<% if @user.admin? %>
+  <p>Hail administrator <%= @user.name %>!</p>
+<% else %>
+  <p>Welcome user <%= @user.name %>!</p>
+<% end %>

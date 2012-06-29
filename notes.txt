@@ -21,12 +21,7 @@
     * Message coupling - coupling to the name of a method
   * The beauty of the Decorator pattern
 
-General:
-
-introduce a smell with an example and specs
-refactor it
-
-try to stick to pure ruby; create rails app in separate dir if desired
+================================================================
 
 Intro - 2 mins
  * me
@@ -70,6 +65,5 @@ when to refactor
 
 
 TODO:
-
   run in tiny res
 

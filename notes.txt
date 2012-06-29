@@ -5,7 +5,7 @@ Intro - 2 mins
  * ask questions
  * I have bribes
 
-data_clump.rb - 24 minutes, spend less time on coupling
+data_clump.rb - 24 minutes, spend less time on coupling, 3-
   * roughly a B
   * move temp to query on OrdersReport
     * shorter methods
@@ -58,3 +58,4 @@ Setup:
   clean repo
   get directory in levelup
   open churn in tab
+  phone to no lock

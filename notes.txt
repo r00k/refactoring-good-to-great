@@ -5,7 +5,7 @@ Intro - 2 mins
  * ask questions
  * I have bribes
 
-data_clump.rb - 24 minutes, spend less time on coupling, 3-
+data_clump.rb - 24 minutes, spend less time on coupling, 3-21
   * roughly a B
   * move temp to query on OrdersReport
     * shorter methods
@@ -21,7 +21,7 @@ data_clump.rb - 24 minutes, spend less time on coupling, 3-
   * create private Order#total_sales
   * change to inject(&:+)
 
-null_object.rb - 6 m
+null_object.rb - 6 m, 22-28
   * breaking the core ideas of polymorphism 
     * rather than just sending a msg, we're asking and then reacting
     * would rather just send a message

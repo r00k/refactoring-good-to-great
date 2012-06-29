@@ -13,7 +13,8 @@ class OrdersReport
       @orders.select { |order| order.placed_at >= @start_date &&
                                order.placed_at <= @end_date }
 
-    orders_within_range.map(&:amount).inject { |sum, amount| amount + sum }
+    orders_within_range.
+      map(&:amount).inject { |sum, amount| amount + sum }
   end
 end
 

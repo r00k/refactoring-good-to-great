@@ -58,6 +58,11 @@ open_closed_decorator.rb
   * need an AdminDec and a UserDec, each with their own message
   * add a as_decorated_user method to User
 
+  * proxy:
+    def method_missing(method, *args, &block)
+      @user.send(method, *args, &block)
+    end
+
 
 when to refactor
   * god objects

@@ -1,6 +1,9 @@
 Intro - 2 mins
  * me
- * intermediate to advanced
+ * software is hard because it has to change
+  * a bridge, once built, never needs to change. as long as it satisfies its initial requirements, it's a success
+  * imagine how much harder it would be to build a bridge that's easy to change. that's what writing software is like.
+  * the best measure of system quality is how easy it is to change
  * tell, don't ask
  * ask questions
  * I have bribes

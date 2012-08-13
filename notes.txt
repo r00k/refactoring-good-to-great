@@ -34,6 +34,8 @@ null_object.rb - 6 m, 22-28
   * usable for Prospect vs Logged-in users
   * mention podcast
 
+composition vs inheritance
+
 open_closed_decorator.rb - 11:30m
   * change view to @user.welcome_message
   * create transparent decorators
@@ -59,3 +61,8 @@ Setup:
   get directory in levelup
   open churn in tab
   phone to no lock
+
+
+New ideas / General notes:
+  New example: BraintreeWrapper
+

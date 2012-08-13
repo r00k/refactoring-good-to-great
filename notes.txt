@@ -1,16 +1,12 @@
-Intro - 2 mins
+Intro - 1 min
  * me
- * software is hard because it has to change
-  * a bridge, once built, never needs to change. as long as it satisfies its initial requirements, it's a success
-  * imagine how much harder it would be to build a bridge that's easy to change. that's what writing software is like.
-  * the best measure of system quality is how easy it is to change
  * tell, don't ask
- * ask questions
- * I have bribes
+ * this is pairing
 
 data_clump.rb - 24 minutes, spend less time on coupling, 3-21
+  * I have specs
   * roughly a B
-  * move temp to query on OrdersReport
+  * move temp to query for orders_within_range
     * shorter methods
     * can reuse
     * don't have to read it; makes logic clearer
@@ -20,8 +16,8 @@ data_clump.rb - 24 minutes, spend less time on coupling, 3-21
   * immediate win: coupling is reduced
     * the degree to which components rely on each other
     * fewer arguments is less coupling
-  * create within_range? on DateRange
-  * refactor within_range? to use start_date..end_date.include?(date)
+  * move placed_between? to DateRange#include?
+  * refactor include? to use a range: start_date..end_date.include?(date)
   * create private Order#total_sales
   * change to inject(&:+)
 
@@ -34,19 +30,22 @@ null_object.rb - 6 m, 22-28
   * usable for Prospect vs Logged-in users
   * mention podcast
 
-composition vs inheritance
-
-open_closed_decorator.rb - 11:30m
+deco.rb - 11:30m
   * change view to @user.welcome_message
+  * make this part clearer
   * create transparent decorators
-  * proxy:
-    def method_missing(method, *args, &block)
-      @user.send(method, *args, &block)
-    end
+  * method:
+  def method_missing(method, *args, &block)
+    @user.send(method, *args, &block)
+  end
   * redefine welcome_message
   * wins:
     * logic is separated
     * new methods will still show up on decorated
+
+braintree.rb
+  maybe?
+
 
 when to refactor - 5m
   * god objects
@@ -61,6 +60,7 @@ Setup:
   get directory in levelup
   open churn in tab
   phone to no lock
+  make snippet for method_missing noise
 
 
 New ideas / General notes:

@@ -3,7 +3,7 @@ Intro - 1 min
  * tell, don't ask
  * this is pairing
 
-data_clump.rb - 24 minutes, spend less time on coupling, 3-21
+data_clump.rb - 24 minutes, spend less time on coupling, 3-21 (18.5)
   * I have specs
   * roughly a B
   * move temp to query for orders_within_range
@@ -21,7 +21,7 @@ data_clump.rb - 24 minutes, spend less time on coupling, 3-21
   * create private Order#total_sales
   * change to inject(&:+)
 
-null_object.rb - 6 m, 22-28
+null_object.rb - 6 m, 22-28; 19-24 5m
   * breaking the core ideas of polymorphism 
     * rather than just sending a msg, we're asking and then reacting
     * would rather just send a message
@@ -31,9 +31,9 @@ null_object.rb - 6 m, 22-28
 
 deco.rb - 11:30m
   * change view to @user.welcome_message
-  * make this part clearer
+  * add method to user, but it's bad
+  * create AdminPresenter and NormalUserPresenter
   * create transparent decorators
-  * method:
   * redefine welcome_message
   * wins:
     * logic is separated

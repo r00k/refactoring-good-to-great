@@ -27,25 +27,17 @@ null_object.rb - 6 m, 22-28
     * would rather just send a message
   * we co-opted nil to stand in for 'no customer'
   * create NullCustomer
-  * usable for Prospect vs Logged-in users
-  * mention podcast
+  * Don't use if current_user, have non-logged-in users be a certain class
 
 deco.rb - 11:30m
   * change view to @user.welcome_message
   * make this part clearer
   * create transparent decorators
   * method:
-  def method_missing(method, *args, &block)
-    @user.send(method, *args, &block)
-  end
   * redefine welcome_message
   * wins:
     * logic is separated
     * new methods will still show up on decorated
-
-braintree.rb
-  maybe?
-
 
 when to refactor - 5m
   * god objects
@@ -54,15 +46,9 @@ when to refactor - 5m
   * bugs love company
 
 Setup:
-  boot macvim
+  boot into oldvim
   run tests
   clean repo
   get directory in levelup
   open churn in tab
   phone to no lock
-  make snippet for method_missing noise
-
-
-New ideas / General notes:
-  New example: BraintreeWrapper
-

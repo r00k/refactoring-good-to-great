@@ -39,6 +39,18 @@ deco.rb - 11:30m
     * logic is separated
     * new methods will still show up on decorated
 
+depend_upon_abstractions.rb
+  * key idea: depend on abstractions
+  * just because it's in a gem doesn't mean it's abstracted
+  * problems:
+    * changing gems or gateways affects lots of business logic
+    * we'll have to stub out someone else's code
+  * depend_upon_abstractions_fixed.rb
+    * easy to change gems
+    * easy to change providers
+
+
+
 when to refactor - 5m
   * god objects
     * wc -l

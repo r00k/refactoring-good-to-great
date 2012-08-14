@@ -9,9 +9,10 @@ describe OrdersReport do
       order_out_of_range = Order.new(amount: 6,
                                      placed_at: Date.new(2012, 1, 1))
       orders = [order_within_range, order_out_of_range]
+      date_range = [Date.new(2012, 1, 15), Date.new(2012, 1, 30)]
 
       OrdersReport.
-        new(orders, Date.new(2012, 1, 15), Date.new(2012, 1, 30)).
+        new(orders, *date_range).
         total_sales_within_date_range.should == 5
     end
 

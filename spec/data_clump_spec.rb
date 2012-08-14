@@ -17,18 +17,5 @@ describe OrdersReport do
         new(orders, start_date, end_date).
         total_sales_within_date_range.should == 5
     end
-
-    context 'when there are no orders within range' do
-      it 'returns 0' do
-        orders = []
-
-        start_date = Date.new(2012, 1, 15)
-        end_date = Date.new(2012, 1, 30)
-
-        OrdersReport.
-          new(orders, start_date, end_date).
-          total_sales_within_date_range.should == 0
-      end
-    end
   end
 end

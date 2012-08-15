@@ -64,3 +64,11 @@ Setup:
   get directory in levelup
   open churn in tab
   phone to no lock
+
+For next time:
+  * decorator section needs improvement
+  * don't forget to talk about pairing in the intro
+  * make extracting that first temp into a method a leader command
+  * explain parameter coupling in general terms, example didn't help
+
+

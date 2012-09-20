@@ -24,12 +24,12 @@ data_clump.rb - 24 minutes, spend less time on coupling, 3-21 (18.5)
   * change to inject(&:+)
 
 null_object.rb - 6 m, 22-28; 19-24 5m
-  * violates tell don't ask
-    * rather than just sending a msg, we're asking and then reacting
-    * would rather just send a message
-  * we co-opted nil to stand in for 'no customer'
+  * problems
+    * violates tell don't ask
+    * co-opts nil to stand in for 'no customer'
+    * obscures the true intent of the code 
   * create NullCustomer
-  * Don't use if current_user, have non-logged-in users be a certain class
+  * Poll: who has code like "if current_user ; ... ; end"
 
 deco.rb - 11:30m
   * change view to @user.welcome_message

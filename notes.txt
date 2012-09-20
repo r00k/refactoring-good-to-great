@@ -10,14 +10,16 @@ data_clump.rb - 24 minutes, spend less time on coupling, 3-21 (18.5)
     * shorter methods
     * can reuse
     * don't have to read it; makes logic clearer
-  * move select to Order#placed_between?(start_date, end_date)
+  * move select to Order#placed_between?(@start_date, @end_date)
   * identify data clump, passed in three places
   * extract to DateRange
+    * start in spec
   * immediate win: coupling is reduced
     * the degree to which components rely on each other
     * fewer arguments is less coupling
+    * nice place to hang an #include? method
   * move placed_between? to DateRange#include?
-  * refactor include? to use a range: start_date..end_date.include?(date)
+    * refactor include? to use a range: (start_date..end_date).include?(date)
   * create private Order#total_sales
   * change to inject(&:+)
 
@@ -49,8 +51,6 @@ depend_upon_abstractions.rb
     * easy to change gems
     * easy to change providers
 
-
-
 when to refactor - 5m
   * god objects
     * wc -l
@@ -58,17 +58,15 @@ when to refactor - 5m
   * bugs love company
 
 Setup:
-  boot into oldvim
-  run tests
+  print notes
   clean repo
-  get directory in levelup
+  get directory in anonymized/
   open churn in tab
   phone to no lock
+  make sure temp extraction method works
+      ddjjddkkVjdjjjkodef orders	pjoendkkVj<jxkkkoprivate
 
 For next time:
-  * decorator section needs improvement
   * don't forget to talk about pairing in the intro
   * make extracting that first temp into a method a leader command
   * explain parameter coupling in general terms, example didn't help
-
-

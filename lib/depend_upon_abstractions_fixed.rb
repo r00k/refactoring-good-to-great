@@ -18,16 +18,16 @@ end
 class PaymentGateway
   SUBSCRIPTION_AMOUNT = 10.to_money
 
-  def charge_for_subscription(user)
+  def self.charge_for_subscription(user)
     braintree_id = BraintreeGem.find_user(user.email).braintree_id
     BraintreeGem.charge(braintree_id, SUBSCRIPTION_AMOUNT)
   end
 
-  def create_customer(user)
+  def self.create_customer(user)
     BraintreeGem.create_customer(user.email)
   end
 
-  def refund(refund_model)
+  def self.refund(refund_model)
     transaction_id = BraintreeGem.find_transaction(order.braintree_id)
     BraintreeGem.refund(transaction_id, order.amount)
   end

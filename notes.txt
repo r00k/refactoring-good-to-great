@@ -31,16 +31,6 @@ null_object.rb - 6 m, 22-28; 19-24 5m
   * create NullCustomer
   * Poll: who has code like "if current_user ; ... ; end"
 
-deco.rb - 11:30m
-  * change view to @user.welcome_message
-  * add method to user, but it's bad
-  * create AdminPresenter and NormalUserPresenter
-  * create transparent decorators
-  * redefine welcome_message
-  * wins:
-    * logic is separated
-    * new methods will still show up on decorated
-
 depend_upon_abstractions.rb
   * key idea: depend on abstractions
   * just because it's in a gem doesn't mean it's abstracted

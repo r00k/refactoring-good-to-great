@@ -24,7 +24,7 @@ data_clump.rb - 24 minutes, spend less time on coupling, 3-21 (18.5)
   * change to inject(&:+)
 
 null_object.rb - 6 m, 22-28; 19-24 5m
-  * breaking the core ideas of polymorphism 
+  * violates tell don't ask
     * rather than just sending a msg, we're asking and then reacting
     * would rather just send a message
   * we co-opted nil to stand in for 'no customer'

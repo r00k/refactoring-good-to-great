@@ -24,9 +24,9 @@ class JobSite
     end
   end
 
-  def email_contact(email)
+  def email_contact(email_body)
     if contact
-      contact.deliver_personalized_email(email)
+      contact.deliver_personalized_email(email_body)
     end
   end
 end

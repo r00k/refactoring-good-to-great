@@ -1,3 +1,7 @@
+Mirror displays - fn + f7
+Sound - Mike
+
+
 Intro - 1 min
  * me
  * this is pairing
@@ -57,8 +61,3 @@ Setup:
   phone to no lock
   make sure temp extraction method works
       ddjjddkkVjdjjjkodef orders	pjoendkkVj<jxkkkoprivate
-
-For next time:
-  * don't forget to talk about pairing in the intro
-  * make extracting that first temp into a method a leader command
-  * explain parameter coupling in general terms, example didn't help

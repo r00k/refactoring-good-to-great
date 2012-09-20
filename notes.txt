@@ -1,7 +1,7 @@
 Intro - 1 min
  * me
- * tell, don't ask
  * this is pairing
+ * tell, don't ask
 
 data_clump.rb - 24 minutes, spend less time on coupling, 3-21 (18.5)
   * I have specs
@@ -49,6 +49,7 @@ when to refactor - 5m
   * bugs love company
 
 Setup:
+  clear history
   print notes
   clean repo
   get directory in anonymized/

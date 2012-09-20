@@ -7,7 +7,7 @@ describe 'When a site has a contact' do
                            phone: '555-1212',
                            address: '123 Main St')
 
-    @site = JobSite.new(Location.new, @contact)
+    @site = JobSite.new(stub(:location), @contact)
   end
 
   describe '#contact_name' do
@@ -34,7 +34,7 @@ end
 
 describe 'When a site lacks a contact' do
   before do
-    @site = JobSite.new(Location.new, nil)
+    @site = JobSite.new(stub(:location), nil)
   end
 
   describe '#contact_name' do

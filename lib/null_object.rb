@@ -36,6 +36,3 @@ class Contact < OpenStruct
     email.deliver(name)
   end
 end
-
-class Location
-end

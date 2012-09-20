@@ -32,14 +32,15 @@ null_object.rb - 6 m, 22-28; 19-24 5m
   * Poll: who has code like "if current_user ; ... ; end"
 
 depend_upon_abstractions.rb
-  * key idea: depend on abstractions
-  * just because it's in a gem doesn't mean it's abstracted
+  * key idea to ease change: depend on abstractions
+    * just because it's in a gem doesn't mean it's abstracted
   * problems:
     * changing gems or gateways affects lots of business logic
     * we'll have to stub out someone else's code
   * depend_upon_abstractions_fixed.rb
-    * easy to change gems
-    * easy to change providers
+    * easy to change gems or providers
+    * easy to mock
+    * nice place to hang constants
 
 when to refactor - 5m
   * god objects

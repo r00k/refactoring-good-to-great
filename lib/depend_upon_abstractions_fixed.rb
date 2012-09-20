@@ -1,41 +1,34 @@
-# app/models/user.rb
 class User
-  SUBSCRIPTION_AMOUNT = 10.to_money
-
-  def initialize(payment_gateway)
-    @payment_gateway = payment_gateway
-  end
-
   def charge_for_subscription
-    @payment_gateway.charge_for_subscription
+    PaymentGateway.charge_for_subscription(self)
   end
 
   def create_as_customer
-    @payment_gateway.create_customer(user.name)
+    PaymentGateway.create_customer(self)
   end
 end
 
 class Refund
-  def initialize(payment_gateway)
-    @payment_gateway = payment_gateway
-  end
-
   def process!
-    @payment_gateway.refund(self)
+    PaymentGateway.refund(self)
   end
 end
 
-# New file: lib/payment_gateway.rb
+# lib/payment_gateway.rb
 class PaymentGateway
-  def charge_for_subscription(amount)
-    Braintree.charge(amount)
+  SUBSCRIPTION_AMOUNT = 10.to_money
+
+  def charge_for_subscription(user)
+    braintree_id = BraintreeGem.find_user(user.email).braintree_id
+    BraintreeGem.charge(braintree_id, SUBSCRIPTION_AMOUNT)
   end
 
-  def create_customer(customer_name)
-    Braintree.create_customer(customer_name)
+  def create_customer(user)
+    BraintreeGem.create_customer(user.email)
   end
 
-  def refund(refund)
-    Braintree.refund(refund.order_amount, refund.user_braintree_id)
+  def refund(refund_model)
+    transaction_id = BraintreeGem.find_transaction(order.braintree_id)
+    BraintreeGem.refund(transaction_id, order.amount)
   end
 end

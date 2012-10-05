@@ -1,11 +1,8 @@
 Mirror displays - fn + f7
-Sound - Mike
-
 
 Intro - 1 min
- * me
+ * I work at thoughtbot
  * this is pairing
- * tell, don't ask
 
 data_clump.rb - 24 minutes, spend less time on coupling, 3-21 (18.5)
   * I have specs
@@ -13,7 +10,8 @@ data_clump.rb - 24 minutes, spend less time on coupling, 3-21 (18.5)
   * move temp to query for orders_within_range
     * shorter methods
     * can reuse
-    * don't have to read it; makes logic clearer
+    * don't have to read it
+      * hints that implementation details are unimportant
   * move select to Order#placed_between?(@start_date, @end_date)
   * identify data clump, passed in three places
   * extract to DateRange
@@ -23,9 +21,12 @@ data_clump.rb - 24 minutes, spend less time on coupling, 3-21 (18.5)
     * fewer arguments is less coupling
     * nice place to hang an #include? method
   * move placed_between? to DateRange#include?
-    * refactor include? to use a range: (start_date..end_date).include?(date)
+    * refactor include? to use a range: (start_date..end_date).cover?(date)
   * create private Order#total_sales
   * change to inject(&:+)
+  * NYANCAT
+
+NyanCat
 
 null_object.rb - 6 m, 22-28; 19-24 5m
   * problems

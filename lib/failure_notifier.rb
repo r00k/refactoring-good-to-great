@@ -1,1 +1,0 @@
-parameter_coupling_example.rb

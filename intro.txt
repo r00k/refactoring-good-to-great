@@ -5,13 +5,11 @@
 
 
                    Refactoring from Good to Great
-                                 v1.2
+                                v1.2
                                
-                             Ben Orenstein
-                               
-                             twitter: r00k
-                             github:  r00k
-
-
-
+                            Ben Orenstein
+                            thoughtbot
+                              
+                            twitter: r00k
+                            github:  r00k
 

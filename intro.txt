@@ -4,16 +4,13 @@
 
 
 
-
-
-
-                            Refactoring from Good to Great
-                                        v1.2
-                                
-                                    Ben Orenstein
+                   Refactoring from Good to Great
+                                 v1.2
                                
-                                    twitter: r00k
-                                    github:  r00k
+                             Ben Orenstein
+                               
+                             twitter: r00k
+                             github:  r00k
 
 
 

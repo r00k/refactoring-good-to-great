@@ -15,13 +15,15 @@ data_clump.rb - 24 minutes, spend less time on coupling, 3-21 (18.5)
   * move select to Order#placed_between?(@start_date, @end_date)
   * identify data clump, passed in three places
   * extract to DateRange
-    * start in spec
+    * start by instantiating in Order
+    * then invert control, placing in spec
   * immediate win: coupling is reduced
     * the degree to which components rely on each other
     * fewer arguments is less coupling
-    * nice place to hang an #include? method
+    * nice place to hang an #include? method (Corey Haines "behavior magnets")
   * move placed_between? to DateRange#include?
     * refactor include? to use a range: (start_date..end_date).cover?(date)
+  * DateRange can just be subclassed from Range
   * create private Order#total_sales
   * change to inject(&:+)
   * NYANCAT

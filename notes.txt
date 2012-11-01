@@ -48,8 +48,12 @@ depend_upon_abstractions.rb
     * easy to change gems or providers
     * easy to mock
     * nice place to hang constants
+    * adapter pattern
+      * inversion of control allows us to swap in a different implementation when
+        Braintree is down, with none of the objects that use the Gateway knowing
 
 when to refactor - 5m
+  * after every change you make
   * god objects
     * wc -l
   * high churn files

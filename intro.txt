@@ -5,7 +5,7 @@
 
 
                    Refactoring from Good to Great
-                                v1.2
+                                v1.3
                                
                             Ben Orenstein
                             thoughtbot

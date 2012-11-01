@@ -13,8 +13,10 @@ describe OrdersReport do
       start_date = Date.new(2012, 1, 15)
       end_date = Date.new(2012, 1, 30)
 
+
+      range = DateRange.new(start_date, end_date)
       OrdersReport.
-        new(orders, start_date, end_date).
+        new(orders, range).
         total_sales_within_date_range.should == 5
     end
   end

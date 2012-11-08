@@ -1,19 +1,15 @@
 class User
-  SUBSCRIPTION_AMOUNT = 10.to_money
-
   def charge_for_subscription
-    braintree_id = BraintreeGem.find_user(email).braintree_id
-    BraintreeGem.charge(braintree_id, SUBSCRIPTION_AMOUNT)
+    PaymentGateway.new.charge_for_subscription(self)
   end
 
   def create_as_customer
-    BraintreeGem.create_customer(email)
+    PaymentGateway.new.create_customer(self)
   end
 end
 
 class Refund
   def process!
-    transaction_id = BraintreeGem.find_transaction(order.braintree_id)
-    BraintreeGem.refund(transaction_id, amount)
+    PaymentGateway.new.refund(self)
   end
 end

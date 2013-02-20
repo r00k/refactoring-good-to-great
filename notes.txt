@@ -1,6 +1,7 @@
 Mirror displays - fn + f7
 
 Intro - 1 min
+ * last time!
  * I work at thoughtbot
  * this is pairing
 

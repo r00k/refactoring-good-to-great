@@ -75,3 +75,4 @@ Setup:
   phone to no lock
   make sure temp extraction method works
       ddjjddkkVjdjjjkodef orders	pjoendkkVj<jxkkkoprivate
+  make sure undo works

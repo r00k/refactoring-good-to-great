@@ -17,14 +17,17 @@ data_clump.rb - 24 minutes, spend less time on coupling, 3-21 (18.5)
   * extract to DateRange
     * start by instantiating in Order
     * then invert control, placing in spec
+      * smaller steps are good
   * immediate win: coupling is reduced
     * the degree to which components rely on each other
     * fewer arguments is less coupling
     * nice place to hang an #include? method (Corey Haines "behavior magnets")
+    * Value Object
   * move placed_between? to DateRange#include?
     * refactor include? to use a range: (start_date..end_date).cover?(date)
   * DateRange can just be subclassed from Range
   * create private Order#total_sales
+  * worsened coupling, maybe we want OrdersCollection
   * change to inject(&:+)
   * NYANCAT
 
@@ -32,7 +35,7 @@ NyanCat
 
 null_object.rb - 6 m, 22-28; 19-24 5m
   * problems
-    * violates tell don't ask
+    * feature envy / TDA
     * co-opts nil to stand in for 'no customer'
     * obscures the true intent of the code 
   * create NullCustomer
@@ -42,15 +45,14 @@ depend_upon_abstractions.rb
   * key idea to ease change: depend on abstractions
     * just because it's in a gem doesn't mean it's abstracted
   * problems:
-    * changing gems or gateways affects lots of business logic
+    * divergent change
     * we'll have to stub out someone else's code
   * depend_upon_abstractions_fixed.rb
     * easy to change gems or providers
     * easy to mock
     * nice place to hang constants
     * adapter pattern
-      * inversion of control allows us to swap in a different implementation when
-        Braintree is down, with none of the objects that use the Gateway knowing
+      * inversion of control allows us to swap in a different implementation when Braintree is down, with none of the objects that use the Gateway knowing
 
 when to refactor - 5m
   * after every change you make
@@ -58,6 +60,10 @@ when to refactor - 5m
     * wc -l
   * high churn files
   * bugs love company
+
+plugs
+  * learn.thoughtbot.com
+
 
 Setup:
   clear history
